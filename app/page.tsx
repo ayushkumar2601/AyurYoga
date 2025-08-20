@@ -9,12 +9,17 @@ import { ScrollReveal } from "@/components/scroll-reveal"
 import { GradientText } from "@/components/gradient-text"
 import { SpiritualCard } from "@/components/spiritual-card"
 import { ArrowRight, Sparkles } from "lucide-react"
+import { useState } from "react";
+import CustomCursor from "@/components/CustomCursor"
+
 
 export default function HomePage() {
+    const [hover, setHover] = useState(false);//this one added
   return (
     <div className="min-h-screen bg-background relative">
       <AuroraBackground />
       <FloatingNavbar />
+      <CustomCursor isHover={hover}/>
 
       <main>
         {/* Hero Section */}
@@ -32,7 +37,9 @@ export default function HomePage() {
                   <Link href="/signup">
                     <Button
                       size="lg"
-                      className="bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-primary-foreground font-semibold px-8 py-4 text-lg"
+                      className="bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-primary-foreground font-semibold px-8 py-4 text-lg " 
+                       onMouseEnter={() => setHover(true)}
+                       onMouseLeave={() => setHover(false)}
                     >
                       Begin Your Journey
                       <ArrowRight className="ml-2 h-5 w-5" />
@@ -42,7 +49,8 @@ export default function HomePage() {
                     <Button
                       size="lg"
                       variant="outline"
-                      className="border-primary text-primary hover:bg-primary/10 bg-transparent px-8 py-4 text-lg"
+                      className="border-primary text-primary hover:bg-primary/10 bg-transparent px-8 py-4 text-lg " onMouseEnter={() => setHover(true)}
+                       onMouseLeave={() => setHover(false)}
                     >
                       Explore Wisdom
                     </Button>
@@ -57,10 +65,11 @@ export default function HomePage() {
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8" onMouseEnter={() => setHover(true)}
+                       onMouseLeave={() => setHover(false)} >
                 <ScrollReveal delay={100}>
                   <Link href="/signup">
-                    <SpiritualCard className="p-6 text-center hover:scale-105 transition-transform duration-300 cursor-pointer">
+                    <SpiritualCard className="p-6 text-center hover:scale-105 transition-transform duration-300 cursor-pointer" >
                       <div className="space-y-4">
                         <div className="w-16 h-16 rounded-full bg-gradient-to-r from-primary to-accent flex items-center justify-center mx-auto">
                           <span className="text-2xl">🧘‍♀️</span>

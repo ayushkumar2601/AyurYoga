@@ -12,6 +12,7 @@ import YogaPosesModal from "@/components/yoga-poses-modal"
 import { FloatingElements3D } from "@/components/3d-floating-elements"
 import { Lotus3D } from "@/components/3d-lotus"
 import { Chakra3D } from "@/components/3d-chakra"
+import { Footer } from "@/components/footer"
 
 export default function WellnessDashboardPage() {
   const [doshaType, setDoshaType] = useState<string>("")
@@ -292,6 +293,7 @@ export default function WellnessDashboardPage() {
           border: 1px solid rgba(255, 255, 255, 0.2);
         }
       `}</style>
+      <Footer/>
     </div>
   )
 }

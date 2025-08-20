@@ -1,13 +1,15 @@
 "use client"
 
 import FloatingNavbar from "@/components/floating-navbar"
-import { Footer } from "@/components/footer"
 import { AnimatedBackground } from "@/components/animated-background"
 import { ScrollReveal } from "@/components/scroll-reveal"
 import { GradientText } from "@/components/gradient-text"
 import { SpiritualCard } from "@/components/spiritual-card"
 import { Button } from "@/components/ui/button"
 import { Heart, Brain, Zap, Shield, Sun } from "lucide-react"
+import { AuroraBackground } from "@/components/aurora-background"
+import { Footer } from "@/components/footer"
+// import { Footer } from "@/components/footer"
 
 export default function AboutYogaPage() {
   const yogaTypes = [
@@ -62,7 +64,7 @@ export default function AboutYogaPage() {
 
   return (
     <div className="min-h-screen bg-background relative">
-      <AnimatedBackground />
+      <AuroraBackground/>
       <FloatingNavbar />
 
       <main className="pt-24">
@@ -293,8 +295,7 @@ export default function AboutYogaPage() {
           </div>
         </section>
       </main>
-
-      <Footer />
+      <Footer/>
     </div>
   )
 }

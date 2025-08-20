@@ -2,12 +2,12 @@
 
 import FloatingNavbar from "@/components/floating-navbar"
 import { Footer } from "@/components/footer"
-import { AnimatedBackground } from "@/components/animated-background"
 import { ScrollReveal } from "@/components/scroll-reveal"
 import { GradientText } from "@/components/gradient-text"
 import { SpiritualCard } from "@/components/spiritual-card"
 import { Button } from "@/components/ui/button"
 import { Leaf, Wind, Flame, Mountain } from "lucide-react"
+import { AuroraBackground } from "@/components/aurora-background"
 
 export default function AboutAyurvedaPage() {
   const doshas = [
@@ -69,7 +69,7 @@ export default function AboutAyurvedaPage() {
 
   return (
     <div className="min-h-screen bg-background relative">
-      <AnimatedBackground />
+      <AuroraBackground/>
       <FloatingNavbar />
 
       <main className="pt-24">

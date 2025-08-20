@@ -686,3 +686,253 @@
 .scroll-delay-500 {
   transition-delay: 500ms;
 }
+/* .cursor {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #00bfff;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: width 0.2s ease, height 0.2s ease, background 0.2s ease;
+  z-index: 9999;
+}
+
+.cursor-hover {
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 191, 255, 0.2);
+}
+ */
+/* .cursor {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: width 0.25s ease, height 0.25s ease, background 0.25s ease, backdrop-filter 0.25s ease, border 0.25s ease;
+  z-index: 9999;
+
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.cursor-hover {
+  width: 60px;
+  height: 60px;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px) saturate(150%);
+  -webkit-backdrop-filter: blur(12px) saturate(150%);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+} */
+/* .cursor {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+
+  background: inherit;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 200%;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  border: 2px solid rgba(255,255,255,0.6);
+
+  transition: width 0.3s ease, height 0.3s ease, background-size 0.3s ease;
+}
+
+.cursor-hover {
+  width: 120px;
+  height: 120px;
+  background-size: 250%;
+} */
+ /* .cursor {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  background: rgba(255, 255, 255, 0.1);
+
+  border: 1.5px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+
+  transition: width 0.25s ease, height 0.25s ease, backdrop-filter 0.25s ease;
+}
+
+.cursor-hover {
+  width: 100px;
+  height: 100px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+} */
+ /* .cursor {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+
+  background-image: linear-gradient(
+    120deg,
+    rgba(255, 0, 150, 0.4),
+    rgba(0, 200, 255, 0.4),
+    rgba(0, 255, 150, 0.4)
+  );
+  background-size: 300% 300%;
+  animation: siri-gradient 5s ease infinite;
+
+  transition: width 0.25s ease, height 0.25s ease, backdrop-filter 0.25s ease;
+}
+
+.cursor-hover {
+  width: 30px;
+  height: 30px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+@keyframes siri-gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+} */
+/* .cursor {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+
+  background-image: linear-gradient(
+      120deg,
+      rgba(255, 0, 150, 0.6),
+      rgba(0, 200, 255, 0.6),
+      rgba(0, 255, 150, 0.6)
+    ),
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.8), transparent 70%);
+  background-blend-mode: screen;
+  background-size: 300% 300%;
+  animation: siri-gradient 4s ease infinite;
+
+  box-shadow: 0 0 12px rgba(0, 200, 255, 0.8),
+              0 0 24px rgba(255, 0, 150, 0.6),
+              inset 0 0 6px rgba(255, 255, 255, 0.5);
+
+  transition: width 0.25s ease, height 0.25s ease, backdrop-filter 0.25s ease;
+}
+
+.cursor-hover {
+  width: 30px;
+  height: 30px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 0 20px rgba(0, 200, 255, 1),
+              0 0 35px rgba(255, 0, 150, 0.9),
+              inset 0 0 8px rgba(255, 255, 255, 0.6);
+}
+
+@keyframes siri-gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+} */
+ html, body, * {
+  cursor: none !important;
+}
+
+.cursor {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+
+  /* Default glass effect */
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+
+  transition: width 0.25s ease, height 0.25s ease, backdrop-filter 0.25s ease,
+              background 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover = Siri glowing animation */
+.cursor-hover {
+  width: 30px;
+  height: 30px;
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  /* Siri gradient */
+  background-image: linear-gradient(
+      120deg,
+      rgba(255, 0, 150, 0.6),
+      rgba(0, 200, 255, 0.6),
+      rgba(0, 255, 150, 0.6)
+    ),
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.8), transparent 70%);
+  background-blend-mode: screen;
+  background-size: 300% 300%;
+  animation: siri-gradient 4s ease infinite;
+
+  /* Glow */
+  box-shadow: 0 0 20px rgba(0, 200, 255, 0.8),
+              0 0 40px rgba(255, 0, 150, 0.7),
+              inset 0 0 10px rgba(255, 255, 255, 0.6);
+}
+
+@keyframes siri-gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+input, textarea {
+  cursor: text !important;
+}
+button {
+  cursor: pointer !important;
+}

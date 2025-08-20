@@ -8,6 +8,7 @@ import { GradientText } from "@/components/gradient-text"
 import { SpiritualCard } from "@/components/spiritual-card"
 import { Button } from "@/components/ui/button"
 import { Globe, BookOpen, Users, Sparkles } from "lucide-react"
+import { AuroraBackground } from "@/components/aurora-background"
 
 export default function HistoryCulturePage() {
   const timeline = [
@@ -100,7 +101,7 @@ export default function HistoryCulturePage() {
 
   return (
     <div className="min-h-screen bg-background relative">
-      <AnimatedBackground />
+      <AuroraBackground/>
       <FloatingNavbar />
 
       <main className="pt-24">
