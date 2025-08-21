@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation"
 import { AnimatedBackground } from "@/components/animated-background"
 import { GradientText } from "@/components/gradient-text"
 import { getDoshaFromScores } from "@/lib/dosha-data"
+import CustomCursor from "@/components/CustomCursor"
 
 interface Question {
   id: number
@@ -92,6 +93,7 @@ const questions: Question[] = [
 ]
 
 export default function DoshaQuizPage() {
+  const [hover, setHover] = useState(false);//this one added
   const [currentQuestion, setCurrentQuestion] = useState(0)
   const [answers, setAnswers] = useState<{ dosha: string; points: number }[]>([])
   const [showQuestion, setShowQuestion] = useState(true)
@@ -146,6 +148,7 @@ export default function DoshaQuizPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <AnimatedBackground />
+      <CustomCursor isHover={hover}/>
 
       {/* Enhanced Progress Chakras */}
       <div className="absolute top-8 left-1/2 transform -translate-x-1/2 z-20">

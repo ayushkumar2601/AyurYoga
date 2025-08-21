@@ -5,8 +5,10 @@ import { useRouter } from "next/navigation"
 import FloatingNavbar from "@/components/floating-navbar"
 import { AuroraBackground } from "@/components/aurora-background"
 import { GradientText } from "@/components/gradient-text"
+import CustomCursor from "@/components/CustomCursor"
 
 export default function WelcomePage() {
+  const [hover, setHover] = useState(false);
   const [showContent, setShowContent] = useState(false)
   const [showMantra, setShowMantra] = useState(false)
   const [blurActive, setBlurActive] = useState(false)
@@ -32,6 +34,7 @@ export default function WelcomePage() {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <FloatingNavbar />
       <AuroraBackground />
+      <CustomCursor isHover={hover}/>
 
       <div className={`absolute inset-0 blur-fade-in ${blurActive ? "active" : ""}`} />
 

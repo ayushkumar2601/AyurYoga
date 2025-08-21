@@ -8,8 +8,11 @@ import { SpiritualCard } from "@/components/spiritual-card"
 import { Button } from "@/components/ui/button"
 import { Leaf, Wind, Flame, Mountain } from "lucide-react"
 import { AuroraBackground } from "@/components/aurora-background"
+import CustomCursor from "@/components/CustomCursor"
+import { useState } from "react"
 
 export default function AboutAyurvedaPage() {
+  const [hover, setHover] = useState(false);//this one added
   const doshas = [
     {
       name: "Vata",
@@ -66,11 +69,12 @@ export default function AboutAyurvedaPage() {
       icon: "🌿",
     },
   ]
-
+  
   return (
     <div className="min-h-screen bg-background relative">
       <AuroraBackground/>
       <FloatingNavbar />
+      <CustomCursor isHover={hover}/>
 
       <main className="pt-24">
         {/* Hero Section */}
@@ -88,9 +92,9 @@ export default function AboutAyurvedaPage() {
               </ScrollReveal>
 
               <ScrollReveal delay={200}>
-                <div className="relative">
+                <div className="relative flex gap-10 ">
                   <img
-                    src="/ayurveda-herbs.png"
+                    src="/ay1.png"
                     alt="Ayurvedic herbs and elements"
                     className="rounded-2xl shadow-2xl mx-auto floating"
                   />
@@ -122,7 +126,7 @@ export default function AboutAyurvedaPage() {
                 <ScrollReveal delay={100}>
                   <div className="space-y-6">
                     <img
-                      src="/ayurveda-balance.png"
+                      src="/ay2.png"
                       alt="Ayurvedic balance concept"
                       className="rounded-xl shadow-lg w-full"
                     />

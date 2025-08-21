@@ -4,6 +4,8 @@ import { useEffect, useState } from "react"
 import { useRouter } from "next/navigation"
 import { AnimatedBackground } from "@/components/animated-background"
 import { GradientText } from "@/components/gradient-text"
+import CustomCursor from "@/components/CustomCursor"
+import { AuroraBackground } from "@/components/aurora-background"
 
 interface DoshaInfo {
   name: string
@@ -49,6 +51,7 @@ const doshaData: Record<string, DoshaInfo> = {
 }
 
 export default function DoshaResultPage() {
+  const [hover, setHover] = useState(false);
   const [doshaType, setDoshaType] = useState<string>("")
   const [showResult, setShowResult] = useState(false)
   const [showDescription, setShowDescription] = useState(false)
@@ -71,7 +74,9 @@ export default function DoshaResultPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
-      <AnimatedBackground />
+      {/* <AnimatedBackground /> */}
+      <AuroraBackground/>
+      <CustomCursor isHover={hover}/>
 
       {/* Flowing Aura Lines */}
       <div className="absolute inset-0">

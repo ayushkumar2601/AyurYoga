@@ -9,9 +9,12 @@ import { Button } from "@/components/ui/button"
 import { Heart, Brain, Zap, Shield, Sun } from "lucide-react"
 import { AuroraBackground } from "@/components/aurora-background"
 import { Footer } from "@/components/footer"
+import { useState } from "react"
+import CustomCursor from "@/components/CustomCursor"
 // import { Footer } from "@/components/footer"
 
 export default function AboutYogaPage() {
+  const [hover, setHover] = useState(false);//this one added
   const yogaTypes = [
     {
       name: "Hatha Yoga",
@@ -66,6 +69,7 @@ export default function AboutYogaPage() {
     <div className="min-h-screen bg-background relative">
       <AuroraBackground/>
       <FloatingNavbar />
+      <CustomCursor isHover={hover}/>
 
       <main className="pt-24">
         {/* Hero Section */}
@@ -83,9 +87,13 @@ export default function AboutYogaPage() {
               </ScrollReveal>
 
               <ScrollReveal delay={200}>
-                <div className="relative">
+                <div className="relative flex gap-10">
                   <img
-                    src="/serene-yoga-lotus.png"
+                    src="/y1.png"
+                    alt="Yoga practitioner in meditation"
+                    className="rounded-2xl shadow-2xl mx-auto floating"
+                  /><img
+                    src="/y5.png"
                     alt="Yoga practitioner in meditation"
                     className="rounded-2xl shadow-2xl mx-auto floating"
                   />
@@ -168,7 +176,7 @@ export default function AboutYogaPage() {
 
                 <ScrollReveal delay={200}>
                   <div className="space-y-6">
-                    <img src="/yoga-sequence.png" alt="Yoga poses sequence" className="rounded-xl shadow-lg w-full" />
+                    <img src="/y3.png" alt="Yoga poses sequence" className="rounded-xl shadow-lg w-full" />
                     <p className="text-muted-foreground leading-relaxed">
                       Through the practice of asanas (postures), pranayama (breathing techniques), and meditation, yoga
                       creates a pathway to inner peace, physical vitality, and spiritual awakening. Each element works

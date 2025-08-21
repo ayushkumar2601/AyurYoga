@@ -9,8 +9,11 @@ import { SpiritualCard } from "@/components/spiritual-card"
 import { Button } from "@/components/ui/button"
 import { Globe, BookOpen, Users, Sparkles } from "lucide-react"
 import { AuroraBackground } from "@/components/aurora-background"
+import CustomCursor from "@/components/CustomCursor"
+import { useState } from "react"
 
 export default function HistoryCulturePage() {
+  const [hover, setHover] = useState(false);//this one added
   const timeline = [
     {
       period: "3000-1500 BCE",
@@ -103,6 +106,7 @@ export default function HistoryCulturePage() {
     <div className="min-h-screen bg-background relative">
       <AuroraBackground/>
       <FloatingNavbar />
+      <CustomCursor isHover={hover}/>
 
       <main className="pt-24">
         {/* Hero Section */}
@@ -122,7 +126,7 @@ export default function HistoryCulturePage() {
               <ScrollReveal delay={200}>
                 <div className="relative">
                   <img
-                    src="/ancient-temple.png"
+                    src="/ay1.png"
                     alt="Ancient Indian temple representing yoga and Ayurveda origins"
                     className="rounded-2xl shadow-2xl mx-auto floating"
                   />

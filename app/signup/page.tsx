@@ -14,8 +14,10 @@ import { ScrollReveal } from "@/components/scroll-reveal"
 import { GradientText } from "@/components/gradient-text"
 import { SpiritualCard } from "@/components/spiritual-card"
 import { Eye, EyeOff, Mail, User, Lock } from "lucide-react"
+import CustomCursor from "@/components/CustomCursor"
 
 export default function SignupPage() {
+  const [hover, setHover] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -50,7 +52,7 @@ export default function SignupPage() {
     <div className="min-h-screen bg-background relative">
       <AnimatedBackground />
       <FloatingNavbar />
-
+      <CustomCursor isHover={hover}/>
       <main className="pt-24 pb-12">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
