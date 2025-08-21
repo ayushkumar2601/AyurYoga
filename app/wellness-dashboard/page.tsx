@@ -327,6 +327,9 @@ import { Progress } from "@/components/ui/progress"
 import { Badge } from "@/components/ui/badge"
 // import { Progress } from "@/components/ui/progress"
 // import { Badge } from "@/components/ui/badge"
+import BreathingExercise from "@/components/BreathingExercise";
+import Chatbot from "@/components/Chatbot"
+
 
 export default function WellnessDashboardPage() {
   const [hover, setHover] = useState(false);
@@ -515,6 +518,36 @@ export default function WellnessDashboardPage() {
             </Card>
           </div>
         </ScrollReveal>
+        {/* Breathing Exercise Section */}
+{/* <ScrollReveal>
+  <div className="max-w-6xl mx-auto px-4 pb-20">
+    <Card className="glass-card rounded-3xl p-6">
+      <CardHeader>
+        <CardTitle className="text-slate-200 font-serif text-xl">
+          Breathing Exercise
+        </CardTitle>
+      </CardHeader>
+      <CardContent>
+        <BreathingExercise />
+      </CardContent>
+    </Card>
+  </div>
+</ScrollReveal> */}
+<ScrollReveal>
+  <div className="flex justify-center items-center pb-20">
+    <Card className="glass-card rounded-3xl p-6 w-[22rem]">
+      <CardHeader>
+        <CardTitle className="text-slate-200 font-serif text-xl text-center">
+          Breathing Exercise
+        </CardTitle>
+      </CardHeader>
+      <CardContent>
+        <BreathingExercise />
+      </CardContent>
+    </Card>
+  </div>
+</ScrollReveal>
+
 
 
 
@@ -664,6 +697,8 @@ export default function WellnessDashboardPage() {
           border: 1px solid rgba(255, 255, 255, 0.2);
         }
       `}</style>
+      {/* Chatbot fixed at bottom-right */}
+            <Chatbot />
       <Footer/>
     </div>
   )

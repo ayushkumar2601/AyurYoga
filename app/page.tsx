@@ -11,6 +11,7 @@ import { SpiritualCard } from "@/components/spiritual-card"
 import { ArrowRight, Sparkles } from "lucide-react"
 import { useState } from "react";
 import CustomCursor from "@/components/CustomCursor"
+import Chatbot from "@/components/Chatbot"
 
 
 export default function HomePage() {
@@ -28,7 +29,7 @@ export default function HomePage() {
             <div className="max-w-4xl mx-auto text-center">
               <ScrollReveal>
                 <h1 className="text-6xl lg:text-8xl font-serif font-bold mb-8 leading-tight">
-                  <GradientText>AyurYoga</GradientText>
+                  <GradientText>AyurYog</GradientText>
                 </h1>
                 <p className="text-2xl lg:text-3xl text-muted-foreground mb-12 leading-relaxed">
                   Where Ancient Wisdom Meets Modern Wellness
@@ -146,6 +147,8 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+        {/* Chatbot fixed at bottom-right */}
+      <Chatbot />
       </main>
 
       <Footer />

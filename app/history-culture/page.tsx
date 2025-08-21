@@ -11,6 +11,7 @@ import { Globe, BookOpen, Users, Sparkles } from "lucide-react"
 import { AuroraBackground } from "@/components/aurora-background"
 import CustomCursor from "@/components/CustomCursor"
 import { useState } from "react"
+import Chatbot from "@/components/Chatbot"
 
 export default function HistoryCulturePage() {
   const [hover, setHover] = useState(false);//this one added
@@ -355,8 +356,10 @@ export default function HistoryCulturePage() {
             </div>
           </div>
         </section>
+        {/* Chatbot fixed at bottom-right */}
+              <Chatbot />
       </main>
-
+                
       <Footer />
     </div>
   )

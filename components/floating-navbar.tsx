@@ -313,19 +313,40 @@ export function FloatingNavbar() {
         <div className="flex items-center justify-between px-8 py-4">
           
           {/* Logo */}
-          <Link
+          {/* <Link
             href="/"
             className="flex items-center space-x-2 bg-white/5 hover:bg-white/10 rounded-full px-2 py-1 transition-all duration-300 transform hover:scale-110"
             onMouseEnter={() => setHover(true)}
             onMouseLeave={() => setHover(false)}
           >
-            <div className="w-7 h-7 rounded-full bg-gradient-to-r from-teal-400 to-purple-500 flex items-center justify-center">
-              <span className="text-white font-bold text-xs">AY</span>
-            </div>
+            <div className="w-7 h-7 rounded-full bg-gradient-to-r from-teal-400 to-purple-500 flex items-center justify-center overflow-hidden">
+  <img 
+    src="/logo.png" 
+    alt="Logo" 
+    className="w-full h-full object-cover"
+  />
+</div>
             <span className="rounded-4xl font-serif text-lg font-bold bg-gradient-to-r from-teal-400 to-purple-400 bg-clip-text text-transparent">
               AyurYoga
             </span>
-          </Link>
+          </Link> */}
+          <Link
+  href="/"
+  className="flex items-center space-x-3 bg-white/5 hover:bg-white/10 rounded-full px-3 py-1.5 transition-all duration-300 transform hover:scale-110"
+  onMouseEnter={() => setHover(true)}
+  onMouseLeave={() => setHover(false)}
+>
+  <div className="w-9 h-9 rounded-full bg-gradient-to-r from-teal-400 to-purple-500 flex items-center justify-center overflow-hidden">
+    <img 
+      src="/logo.png" 
+      alt="Logo" 
+      className="w-full h-full object-cover"
+    />
+  </div>
+  <span className="rounded-4xl font-serif text-xl font-bold bg-gradient-to-r from-teal-400 to-purple-400 bg-clip-text text-transparent">
+    AyurYog
+  </span>
+</Link>
 
           {/* Desktop Navigation */}
           <div

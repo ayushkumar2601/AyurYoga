@@ -11,6 +11,7 @@ import { AuroraBackground } from "@/components/aurora-background"
 import { Footer } from "@/components/footer"
 import { useState } from "react"
 import CustomCursor from "@/components/CustomCursor"
+import Chatbot from "@/components/Chatbot"
 // import { Footer } from "@/components/footer"
 
 export default function AboutYogaPage() {
@@ -302,6 +303,8 @@ export default function AboutYogaPage() {
             </div>
           </div>
         </section>
+        {/* Chatbot fixed at bottom-right */}
+              <Chatbot />
       </main>
       <Footer/>
     </div>

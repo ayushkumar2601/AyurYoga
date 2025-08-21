@@ -179,11 +179,15 @@ export function Footer() {
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 rounded-full bg-gradient-to-r from-teal-400 to-purple-500 flex items-center justify-center">
-                <span className="text-white font-bold text-sm">AY</span>
-              </div>
+              <div className="w-9 h-9 rounded-full bg-gradient-to-r from-teal-400 to-purple-500 flex items-center justify-center overflow-hidden">
+    <img 
+      src="/logo.png" 
+      alt="Logo" 
+      className="w-full h-full object-cover"
+    />
+  </div>
               <span className="font-serif text-xl font-semibold text-white">
-                AyurYoga
+                AyurYog
               </span>
             </div>
             <p className="text-gray-300 text-sm">
@@ -246,7 +250,7 @@ export function Footer() {
         {/* Bottom note */}
         <div className="border-t border-white/10 mt-8 pt-8 text-center">
           <p className="text-gray-300 text-sm">
-            © 2025 AyurYoga. Crafted with mindfulness and modern technology.
+            © 2025 AyurYog. Crafted with mindfulness and modern technology.
           </p>
         </div>
       </div>

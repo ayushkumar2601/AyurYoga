@@ -10,6 +10,7 @@ import { Leaf, Wind, Flame, Mountain } from "lucide-react"
 import { AuroraBackground } from "@/components/aurora-background"
 import CustomCursor from "@/components/CustomCursor"
 import { useState } from "react"
+import Chatbot from "@/components/Chatbot"
 
 export default function AboutAyurvedaPage() {
   const [hover, setHover] = useState(false);//this one added
@@ -94,7 +95,7 @@ export default function AboutAyurvedaPage() {
               <ScrollReveal delay={200}>
                 <div className="relative flex gap-10 ">
                   <img
-                    src="/ay1.png"
+                    src="/ayur1.png"
                     alt="Ayurvedic herbs and elements"
                     className="rounded-2xl shadow-2xl mx-auto floating"
                   />
@@ -126,7 +127,7 @@ export default function AboutAyurvedaPage() {
                 <ScrollReveal delay={100}>
                   <div className="space-y-6">
                     <img
-                      src="/ay2.png"
+                      src="/image.png"
                       alt="Ayurvedic balance concept"
                       className="rounded-xl shadow-lg w-full"
                     />
@@ -391,6 +392,8 @@ export default function AboutAyurvedaPage() {
             </div>
           </div>
         </section>
+        {/* Chatbot fixed at bottom-right */}
+              <Chatbot />
       </main>
 
       <Footer />
