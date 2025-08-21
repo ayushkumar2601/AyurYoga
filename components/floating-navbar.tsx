@@ -340,7 +340,7 @@ export function FloatingNavbar() {
     <img 
       src="/logo.png" 
       alt="Logo" 
-      className="w-full h-full object-cover"
+      className="w-full h-full object-cover scale-225"
     />
   </div>
   <span className="rounded-4xl font-serif text-xl font-bold bg-gradient-to-r from-teal-400 to-purple-400 bg-clip-text text-transparent">
