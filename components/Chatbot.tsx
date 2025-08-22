@@ -544,6 +544,7 @@ export default function Chatbot() {
           </div>
         </div>
       ) : (
+        
         // Minimized button
         <button
           onClick={() => setIsOpen(true)}

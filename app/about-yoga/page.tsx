@@ -16,6 +16,8 @@ import Chatbot from "@/components/Chatbot"
 
 export default function AboutYogaPage() {
   const [hover, setHover] = useState(false);//this one added
+  
+
   const yogaTypes = [
     {
       name: "Hatha Yoga",
@@ -31,7 +33,7 @@ export default function AboutYogaPage() {
     },
     {
       name: "Ashtanga Yoga",
-      description: "Traditional, vigorous practice with a set sequence of poses.",
+      description: "A traditional, disciplined yoga style with vigorous practice and a fixed sequence of poses.",
       icon: "⚡",
       benefits: ["Discipline", "Power", "Focus"],
     },

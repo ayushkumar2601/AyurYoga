@@ -172,12 +172,14 @@ export default function DoshaQuizPage() {
             </div>
           ))}
         </div>
-        <div className="mt-4 text-center">
-          <div className="w-64 h-2 bg-slate-800 rounded-full overflow-hidden">
+        <div className="mt-4 text-center justify-center">
+          <div className="flex justify-center">
+          <div className="w-64 h-2 bg-slate-800 rounded-full overflow-hidden ">
             <div
               className="h-full bg-gradient-to-r from-teal-400 to-purple-400 transition-all duration-700 ease-out"
               style={{ width: `${progress}%` }}
             />
+          </div>
           </div>
           <p className="text-sm text-slate-400 mt-2">
             Question {currentQuestion + 1} of {questions.length}
