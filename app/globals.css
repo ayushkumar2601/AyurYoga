@@ -114,21 +114,21 @@
   --font-serif: 'Poppins', serif;
 }
 
-.dark {
-  /* Updated dark theme with spiritual color palette */
-  --background: oklch(0.08 0.02 240); /* Deep indigo-black */
-  --foreground: oklch(0.95 0.01 180); /* Soft white */
-  --card: oklch(0.12 0.03 240); /* Slightly lighter dark */
+/* .dark {
+  
+  --background: oklch(0.08 0.02 240);
+  --foreground: oklch(0.95 0.01 180); 
+  --card: oklch(0.12 0.03 240);
   --card-foreground: oklch(0.95 0.01 180);
   --popover: oklch(0.12 0.03 240);
   --popover-foreground: oklch(0.95 0.01 180);
-  --primary: oklch(0.65 0.15 200); /* Teal accent */
+  --primary: oklch(0.65 0.15 200);
   --primary-foreground: oklch(0.08 0.02 240);
   --secondary: oklch(0.18 0.04 240);
   --secondary-foreground: oklch(0.95 0.01 180);
   --muted: oklch(0.15 0.03 240);
   --muted-foreground: oklch(0.7 0.02 180);
-  --accent: oklch(0.55 0.18 280); /* Purple accent */
+  --accent: oklch(0.55 0.18 280); 
   --accent-foreground: oklch(0.95 0.01 180);
   --destructive: oklch(0.6 0.2 20);
   --destructive-foreground: oklch(0.95 0.01 180);
@@ -148,6 +148,48 @@
   --sidebar-accent-foreground: oklch(0.95 0.01 180);
   --sidebar-border: oklch(0.2 0.04 240);
   --sidebar-ring: oklch(0.65 0.15 200);
+} */
+
+.dark {
+  --background: oklch(0.98 0.02 95);        /* Soft warm white */
+  --foreground: oklch(0.2 0.05 330);       /* Deep plum text */
+
+  --card: oklch(0.97 0.02 95);             /* Slight beige tint */
+  --card-foreground: oklch(0.25 0.06 330);
+
+  --primary: oklch(0.72 0.25 330);         /* Vibrant fuchsia pink */
+  --primary-foreground: oklch(0.98 0.02 95);
+
+  --secondary: oklch(0.92 0.12 75);        /* Warm peach beige */
+  --secondary-foreground: oklch(0.25 0.06 330);
+
+  --accent: oklch(0.8 0.18 330);           /* Rosy-magenta */
+  --accent-foreground: oklch(0.98 0.02 95);
+
+  --muted: oklch(0.93 0.04 95);            /* Soft warm gray */
+  --muted-foreground: oklch(0.4 0.05 330);
+
+  --destructive: oklch(0.58 0.22 30);      /* Rich crimson */
+  --destructive-foreground: oklch(0.98 0.02 95);
+
+  --border: oklch(0.9 0.04 95);
+  --input: oklch(0.95 0.03 95);
+  --ring: oklch(0.72 0.25 330);            /* Pink glow ring */
+
+  --chart-1: oklch(0.72 0.25 330);         /* Hot pink */
+  --chart-2: oklch(0.92 0.12 75);          /* Peach beige */
+  --chart-3: oklch(0.65 0.18 20);          /* Coral red */
+  --chart-4: oklch(0.58 0.2 320);          /* Magenta-purple */
+  --chart-5: oklch(0.9 0.12 95);           /* Golden cream */
+
+  --sidebar: oklch(0.97 0.02 95);
+  --sidebar-foreground: oklch(0.25 0.06 330);
+  --sidebar-primary: oklch(0.72 0.25 330);
+  --sidebar-primary-foreground: oklch(0.98 0.02 95);
+  --sidebar-accent: oklch(0.92 0.12 75);
+  --sidebar-accent-foreground: oklch(0.25 0.06 330);
+  --sidebar-border: oklch(0.9 0.04 95);
+  --sidebar-ring: oklch(0.72 0.25 330);
 }
 
 @theme inline {
@@ -344,15 +386,19 @@
 
   /* Added glassmorphism navbar styles */
   .glass-navbar {
-    @apply backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl shadow-2xl;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.1);
-  }
+  @apply backdrop-blur-xl rounded-2xl shadow-2xl;
+  background: color-mix(in srgb, var(--secondary) 70%, transparent);
+  border: 1px solid var(--border);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2), 0 0 0 1px var(--accent) inset;
+}
 
-  .glass-navbar-scrolled {
-    @apply backdrop-blur-2xl bg-white/10 border border-white/20 rounded-2xl shadow-2xl;
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.2);
-    transform: scale(0.98);
-  }
+.glass-navbar-scrolled {
+  @apply backdrop-blur-2xl rounded-2xl shadow-2xl;
+  background: color-mix(in srgb, var(--primary) 80%, transparent);
+  border: 1px solid var(--accent);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3), 0 0 0 1px var(--accent-foreground) inset;
+  transform: scale(0.98);
+}
 
   /* Added navbar bubble hover animations with cubic-bezier easing */
   .navbar-bubble-hover {
@@ -968,14 +1014,14 @@
   /* Default glass effect */
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
-  background: rgba(255, 255, 255, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: color-mix(in srgb, var(--secondary) 30%, transparent);
+  border: 1px solid var(--accent);
 
   transition: width 0.25s ease, height 0.25s ease, backdrop-filter 0.25s ease,
               background 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Hover = Siri glowing animation */
+/* Hover = glowing pink + beige aurora */
 .cursor-hover {
   width: 30px;
   height: 30px;
@@ -983,23 +1029,32 @@
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 
-  /* Siri gradient */
+  /* Themed gradient */
   background-image: linear-gradient(
       120deg,
-      rgba(255, 0, 150, 0.6),
-      rgba(0, 200, 255, 0.6),
-      rgba(0, 255, 150, 0.6)
+      color-mix(in srgb, var(--primary) 70%, transparent),
+      color-mix(in srgb, var(--secondary) 60%, transparent),
+      color-mix(in srgb, var(--accent) 60%, transparent)
     ),
-    radial-gradient(circle at top left, rgba(255, 255, 255, 0.8), transparent 70%);
+    radial-gradient(circle at top left, var(--accent-foreground), transparent 70%);
   background-blend-mode: screen;
   background-size: 300% 300%;
-  animation: siri-gradient 4s ease infinite;
+  animation: theme-gradient 4s ease infinite;
 
   /* Glow */
-  box-shadow: 0 0 20px rgba(0, 200, 255, 0.8),
-              0 0 40px rgba(255, 0, 150, 0.7),
-              inset 0 0 10px rgba(255, 255, 255, 0.6);
+  box-shadow: 
+    0 0 20px var(--primary),
+    0 0 40px var(--accent),
+    inset 0 0 10px var(--secondary);
 }
+
+/* Smooth shifting gradient animation */
+@keyframes theme-gradient {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 
 @keyframes siri-gradient {
   0% { background-position: 0% 50%; }

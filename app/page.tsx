@@ -47,14 +47,26 @@ export default function HomePage() {
                     </Button>
                   </Link>
                   <Link href="/about-yoga">
-                    <Button
-                      size="lg"
-                      variant="outline"
-                      className="border-primary text-primary hover:bg-primary/10 bg-transparent px-8 py-4 text-lg " onMouseEnter={() => setHover(true)}
-                       onMouseLeave={() => setHover(false)}
-                    >
-                      Explore Wisdom
-                    </Button>
+<Button
+  size="lg"
+  variant="outline"
+  className="
+    border-pink-500 text-pink-600 
+    bg-white/60 backdrop-blur-sm
+    hover:bg-gradient-to-r hover:from-pink-400/20 hover:to-purple-400/20 
+    hover:text-pink-700 hover:border-pink-600 
+    active:from-pink-200/40 active:to-purple-200/40
+    transition-all duration-500 ease-out
+    shadow-sm hover:shadow-lg
+    px-8 py-4 text-lg rounded-2xl
+  "
+  onMouseEnter={() => setHover(true)}
+  onMouseLeave={() => setHover(false)}
+>
+  Explore Wisdom
+</Button>
+
+
                   </Link>
                 </div>
               </ScrollReveal>
@@ -95,7 +107,7 @@ export default function HomePage() {
                     </SpiritualCard>
                   </Link>
                 </ScrollReveal>
-
+                
                 <ScrollReveal delay={300}>
                   <Link href="/about-ayurveda">
                     <SpiritualCard className="p-6 text-center hover:scale-105 transition-transform duration-300 cursor-pointer">
