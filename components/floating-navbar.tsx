@@ -485,7 +485,7 @@ export function FloatingNavbar() {
           >
             <div className="w-9 h-9 rounded-full bg-gradient-to-r from-pink-400 to-amber-200 flex items-center justify-center overflow-hidden">
               <img
-                src="/logo.png"
+                src="final_logo[1].jpg"
                 alt="Logo"
                 className="w-full h-full object-cover scale-125"
               />

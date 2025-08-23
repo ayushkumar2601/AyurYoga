@@ -372,7 +372,7 @@ export function Footer() {
             <div className="flex items-center space-x-2">
               <div className="w-9 h-9 rounded-full bg-gradient-to-r from-pink-400 to-purple-500 flex items-center justify-center overflow-hidden">
                 <img 
-                  src="/logo.png" 
+                  src="/final_logo[1].jpg" 
                   alt="Logo" 
                   className="w-full h-full object-cover"
                 />
