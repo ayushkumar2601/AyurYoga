@@ -32,3 +32,5 @@ export function ParallaxSection({ children, speed = 0.5, className = "" }: Paral
     </div>
   )
 }
+
+
