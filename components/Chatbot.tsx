@@ -965,7 +965,7 @@ export default function Chatbot() {
         <div className="w-[28rem] bg-white rounded-2xl shadow-lg flex flex-col overflow-hidden border border-gray-200">
           {/* Header with minimize button */}
           <div className="flex items-center justify-between p-3 bg-gradient-to-r from-pink-200 to-purple-200 text-gray-800 font-bold">
-            AyurYoga Chatbot
+            AyurBot
             <button
               onClick={() => setIsOpen(false)}
               className="p-1 hover:opacity-80"
